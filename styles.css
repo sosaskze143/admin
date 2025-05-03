@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result-display {
+    margin-top: 20px;
+}
+
+#violationResults, #currencyResults, #customerResults {
+    margin-top: 15px;
+}
