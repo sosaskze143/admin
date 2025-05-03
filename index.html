@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المخالفات والعملات والعملاء</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>نظام إدارة المخالفات والعملات والعملاء</h1>
+
+    <!-- قسم البحث عن المخالفات -->
+    <div id="violation-search">
+        <h3>بحث عن المخالفات</h3>
+        <input type="text" id="violationSearch" placeholder="بحث عن المخالفة..." onkeyup="searchViolation()">
+    </div>
+
+    <!-- قسم البحث عن العملات -->
+    <div id="currency-search">
+        <h3>بحث عن العملات</h3>
+        <input type="text" id="currencySearch" placeholder="بحث عن العملة..." onkeyup="searchCurrency()">
+    </div>
+
+    <!-- قسم البحث عن العملاء -->
+    <div id="customer-search">
+        <h3>بحث عن العملاء</h3>
+        <input type="text" id="customerSearch" placeholder="بحث عن العميل..." onkeyup="searchCustomer()">
+    </div>
+
+    <!-- قسم إضافة عميل جديد -->
+    <div id="add-customer">
+        <h3>إضافة عميل جديد</h3>
+        <label for="customerName">اسم العميل:</label>
+        <input type="text" id="customerName" placeholder="أدخل اسم العميل"><br>
+
+        <button onclick="addCustomer()">إضافة عميل</button>
+    </div>
+
+    <!-- قسم إضافة مخالفة جديدة -->
+    <div id="add-violation">
+        <h3>إضافة مخالفة جديدة</h3>
+        <label for="violationDescription">وصف المخالفة:</label>
+        <input type="text" id="violationDescription" placeholder="أدخل وصف المخالفة"><br>
+
+        <label for="violationAmount">المبلغ:</label>
+        <input type="number" id="violationAmount" placeholder="أدخل المبلغ"><br>
+
+        <label for="violationPaid">هل تم دفع المخالفة؟</label>
+        <select id="violationPaid">
+            <option value="false">لا</option>
+            <option value="true">نعم</option>
+        </select><br>
+
+        <button onclick="addViolation()">إضافة مخالفة</button>
+    </div>
+
+    <!-- قسم تغيير مالك العملة -->
+    <div id="currency-owner-change">
+        <h3>تغيير مالك العملة</h3>
+        <label for="serialNumber">رقم العملة التسلسلي:</label>
+        <input type="text" id="serialNumber" placeholder="ادخل رقم العملة التسلسلي" required><br>
+
+        <label for="newOwner">المالك الجديد:</label>
+        <input type="text" id="newOwner" placeholder="ادخل اسم المالك الجديد" required><br>
+
+        <button onclick="changeOwner()">تغيير المالك</button>
+    </div>
+
+    <!-- قسم عرض النتائج -->
+    <div id="result-display">
+        <h3>النتائج</h3>
+        <div id="violationResults"></div>
+        <div id="currencyResults"></div>
+        <div id="customerResults"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
